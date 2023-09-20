@@ -14,7 +14,14 @@ def conexionBD():
         username = str(config ("username"))
         password = str(config ("pass"))
 
-
+        """
+        Conexion con oracle ejemplo:
+        __________________________________________________________________________
+        connection =pyodbc.connect(
+            'DRIVER={Oracle Driver};SERVER=' + server +
+            ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
+        __________________________________________________________________________
+        """
         connection =pyodbc.connect(
             'DRIVER={ODBC Driver 17 for SQL Server};SERVER=' + server +
             ';DATABASE=' + database + ';UID=' + username + ';PWD=' + password)
